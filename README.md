@@ -1,34 +1,63 @@
-# Automation Project
+# Automation Project Scaffold 🚀
 
-Ett projekt för att bygga en automationslösning med Python, Terraform och enkel webbfrontend.
+Detta är en mall för att snabbt starta nya automationsprojekt.  
+Innehåller grundstruktur för:
 
-## Struktur
+- Backend (Flask-baserad server)
+- Webapp (HTML + CSS + JS)
+- Infrastruktur (Terraform templates)
 
-- `backend/` – Python-skript och logik
-- `infrastructure/` – Terraformkod för infrastruktur
-- `webapp/` – HTML/CSS/JS-mallar och statiska filer
-backend/
-├── config.py              ← Environment settings
-├── utils/                 ← Shared helper functions
-├── models/                ← (If you use Pydantic / DB schemas)
-└── .env                   ← Env variables for dev
+---
 
-## Setup
+## 🛠️ Struktur
 
 ```bash
-cd backend
-pip install -r requirements.txt
+automation-project_template/
+├── backend/
+│   ├── main.py        # Startar appen
+│   ├── config.py      # Konfiguration
+│   ├── models/        # Backend-modeller
+│   ├── utils/         # Hjälpfunktioner
+│   └── requirements.txt
+├── webapp/
+│   ├── static/        # CSS och JS
+│   └── templates/     # HTML-filer
+├── infrastructure/    # Terraform-filer
+└── README.md
 ```
 
-Terraform:
+---
 
-```bash
-cd infrastructure
-terraform init
-terraform apply
-```
+## 🚀 Hur skapar jag ett nytt projekt?
 
-## TODO
+1. Klicka på **"Use this template"** ovanför.
+2. Välj nytt namn och skapa nytt repo.
+3. Klona ditt nya repo till din dator:
+   ```bash
+   git clone https://github.com/ditt-användarnamn/ditt-nya-repo.git
+   cd ditt-nya-repo
+   ```
+4. Starta backend-servern:
+   ```bash
+   cd backend
+   python3 main.py
+   ```
 
-- [ ] Lägg till CI/CD?
-- [ ] Dockerisering?
+---
+
+## 📋 Kom ihåg
+
+- Lägg till eventuella Python-paket i `requirements.txt`
+- Skapa `.env`-fil om du använder hemliga nycklar (och ignorera med `.gitignore`)
+- Du kan fritt ändra strukturen efter behov!
+
+---
+
+## 📢 Tips
+
+- Använd `url_for('static', filename='style.css')` i dina HTML-filer.
+- Håll varje tjänst (`models/`, `utils/`) modulariserad för skalbarhet.
+
+---
+
+# 🚀 Happy Building!
